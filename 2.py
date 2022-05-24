@@ -1,12 +1,21 @@
-# 2. Пользователь вводит время в секундах.
-# Переведите время в часы, минуты, секунды и выведите в формате чч:мм:сс. Используйте форматирование строк.
+# 2. Для списка реализовать обмен значений соседних элементов.
+# Значениями обмениваются элементы с индексами 0 и 1, 2 и 3 и т. д.
+# При нечётном количестве элементов последний сохранить на своём месте.
+# Для заполнения списка элементов нужно использовать функцию input().
+# Пример: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+my_list = []
+i = 0
 
-# Создание исходных переменных по определению
-time = int(input("Введите время в секундах:"))
-time_hour = int((time / 3600))
-time_minute = int(abs(time_hour * 60 - time / 60))
-time_sec = int(abs(time - time_hour * 3600 - time_minute * 60))
+for i in range(int(input("Enter count of list elements:"))):
+    my_list.append(int(input('Enter next number:')))
+print(my_list)
 
-# Вывод времени в формате чч:мм:сс
-print(f" Время: {time_hour:02d}:{time_minute:02d}:{time_sec:02d}")
+a = 0
+b = 1
+
+for a in range(len(my_list)):
+    while b < len(my_list):
+        my_list[a], my_list[b] = my_list[b], my_list[a]
+        b = b + 2
+print(my_list)
 
