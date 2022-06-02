@@ -5,6 +5,7 @@
 def parameters(name, surname, date_of_birth, city, email, phone_number):
     return name, surname, date_of_birth, city, email, phone_number
 
+
 print(parameters((input("Print name of the user:")),
                  (input("Print surname of the user:")),
                  (input("Print date of birth of the user:")),

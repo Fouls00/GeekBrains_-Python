@@ -11,8 +11,9 @@ def my_func(arg_1, arg_2, arg_3):
     else:
         return arg_1 + arg_2
 
-#print(my_func(4, 5, 6))
+
+# print(my_func(4, 5, 6))
 
 
-print(my_func(int(input("Print first argument:")), int(input("Print second argument:")), int(input("Print third argument:"))))
-
+print(my_func(int(input("Print first argument:")), int(input("Print second argument:")),
+              int(input("Print third argument:"))))
