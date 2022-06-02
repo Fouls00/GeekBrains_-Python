@@ -1,16 +1,23 @@
-# Пользователь вводит целое положительное число.
-# Найдите самую большую цифру в числе. Для решения используйте цикл while и арифметические операции.
+# 4. Программа принимает действительное положительное число x и целое отрицательное число y.
+# Выполните возведение числа x в степень y. Задание реализуйте в виде функции my_func(x, y).
+# При решении задания нужно обойтись без встроенной функции возведения числа в степень.
 
-n = int(input("Введите число n:"))
+def my_func(arg_1, arg_2):
+    return arg_1 ** arg_2 if arg_2 < 0 else print("Needs negative value, try again")
 
-# последняя цифра числа
-a = n % 10
-max = 0
 
-# цикл, в ходе которого последовательно присваиваем наибольшее значение a для переменной max
-while a > 0:
-    a = n % 10
-    if a > max:
-        max = a
-    n = n // 10
-print('Максимальная цифра найдена', max)
+print(my_func(float(input("Print float number:")), int(input("Print int number:"))))
+
+
+# 2 Way
+
+def my_func(arg_1, arg_2):
+    i = 1
+    arg_3 = 1
+    while i <= abs(arg_2):
+        arg_3 = arg_3 * arg_1
+        i += 1
+    return 1 / arg_3 if arg_2 < 0 else print("Needs negative value, try again")
+
+
+print(my_func(float(input("Print float number:")), int(input("Print int number:"))))
